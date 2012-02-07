@@ -1,0 +1,15 @@
+insensitive match IN:Host into $ with ^example\.com$
+if matched
+
+  # start of chunk to be repeated for each record
+  insensitive match URL into $ with ^/folder/subfolder/filename\.php\?param=foo$
+  if matched
+    set OUT:Location = http://www.example.org/foo/bar/baz
+    set OUT:Content-Type = text/html
+    set RESPONSE = 301
+    set BODY = Moved
+    goto END
+  endif
+  #end of chunk
+
+endif

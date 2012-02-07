@@ -1,0 +1,21 @@
+Goal:
+	One-off script to generate 'rewrite.script' containing rewrite rules for the Zeus
+	web server based on a Google spreadsheet with 'source' and 'destination' columns.
+
+Dependencies:
+	Google Data Python Library:
+		https://code.google.com/apis/gdata/articles/python_client_lib.html#library
+		https://code.google.com/apis/documents/docs/3.0/developers_guide_python.html#AuthClientLogin
+
+	PyYAML, a YAML parser and emitter:
+		http://pyyaml.org/wiki/PyYAML
+
+	Requires:
+		Valid Google Docs account
+		Valid Google Docs key for a spreadhseet with 'source' and 'destination' columns
+		Modification to the actual rewrite rules to match your requirements
+
+	Getting Started:
+		1. copy config.yaml.default to config.yaml
+		2. provide correct username, pass, document key
+		3. profit!!!

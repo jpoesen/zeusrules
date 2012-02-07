@@ -1,0 +1,9 @@
+
+example: retrieve all docs, filter out doc id, take 1 doc, fetch content
+
+docs = client.GetSpreadsheetsFeed()
+for sheet in docs.entry:
+	key = sheet.link[1].href.split('=')[1]
+		if key == 'some_google_doc_key':
+			rows = client.GetListFeed(key, 'some_worksheet_id')
+				# loop through rows and do stuff
